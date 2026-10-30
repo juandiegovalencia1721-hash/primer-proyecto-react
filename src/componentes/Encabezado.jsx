@@ -1,4 +1,5 @@
 import MenuUsuario from './MenuUsuario'
+import { Link } from 'react-router'
 
 function Encabezado(){
     return(
@@ -6,9 +7,9 @@ function Encabezado(){
             <div className='encabezado-marca'>
             <h1>mi primer App con react</h1>
             <nav>
-                <a href="#">inicio</a>
-                <a href="#">tecnologias</a>
-                <a href="#">contacto</a>
+                <Link to="/">inicio</Link>
+                <Link to="/tecnologias">tecnologias</Link>
+                <a href="mailto:juandiegovalencia1721@gmail.com">contacto</a>
             </nav>
             </div>
             <MenuUsuario />

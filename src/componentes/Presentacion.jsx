@@ -1,12 +1,11 @@
-function Presentacion(){
+function Presentacion({ nombre, ciudad, anioNacimiento, meta, correo, telefono }) {
     return(
         <div className="presentacion">
-            <h1>hola soy juan diego valencia ordoñez
-                vivo en lomas de granada 
-                mis datos son: correo: juanvalencia123@gmail.com
-                telefono: 321 456 7890
-            </h1>
-            
+            <h2>Hola, soy {nombre}</h2>
+            <p>Vivo en {ciudad} y nací en {anioNacimiento}.</p>
+            <p>Mi meta es {meta}.</p>
+            <p>Correo: {correo}</p>
+            <p>Teléfono: {telefono}</p>
         </div>
     )
 }

@@ -1,34 +1,26 @@
 import './App.css'
+import { Route, Routes } from 'react-router'
 import Encabezado from './componentes/Encabezado'
-import Sidebar from './componentes/sidebar'
-import Tarjeta from './componentes/Tarjeta'
+import Sidebar from './componentes/Sidebar'
 import PiePagina from './componentes/piePagina'
-import Presentacion from './componentes/Presentacion'
+import Inicio from './paginas/Inicio'
+import Perfil from './paginas/Perfil'
+import Tecnologias from './paginas/Tecnologias'
 
-
-
-function App(){
-
-  const programa = 'analisis y desarrollo de software'
-  return(
-    <>
-    <div className='layout'>
-    <Encabezado />
-    <Sidebar /> 
-    <main className='contenido'>
-    <h2>bienvenidos al programa {programa}</h2>
-    <Presentacion />
-    <section className='tarjetas'>
-
-    <Tarjeta />
-    <Tarjeta />
-    </section>
-    
-    </main>
-    <PiePagina />
+function App() {
+  return (
+    <div className="layout">
+      <Encabezado />
+      <Sidebar />
+      <main className="contenido">
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/tecnologias" element={<Tecnologias />} />
+        </Routes>
+      </main>
+      <PiePagina />
     </div>
-    </>
-
   )
 }
 

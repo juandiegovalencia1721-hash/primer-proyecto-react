@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import fotoPerfil from '../assets/foto-perfil.png'
+import { Link } from 'react-router'
 
 function MenuUsuario() {
     const [abierto, setAbierto] = useState(false)
-    const nombre = 'Fabian Urrea'
+    const nombre = 'juan Diego'
     const rol = 'Instructor ADSO'
 
     return (
@@ -29,7 +30,7 @@ function MenuUsuario() {
 
             {abierto && (
                 <ul className="menu-desplegable">
-                    <li><a href="#">Mi perfil</a></li>
+                    <li><Link to="/perfil">Mi perfil</Link></li>
                     <li><a href="#">Configuración</a></li>
                     <li className="separador" aria-hidden="true"></li>
                     <li><a href="#" className="cerrar-sesion">Cerrar sesión</a></li>
